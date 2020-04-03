@@ -5,15 +5,14 @@
         username
       %ul.side-header__box__menu
         %li.side-header__box__menu__new-group
-          %a(href="/groups/new") 
-          = icon('fas', 'edit')
+          = link_to "#" do
+            = icon('fas', 'edit')
         %li.side-header__box__menu__edit-user
-          %a(href="/users/18319/edit")
-          = icon('fas', 'cog')
+          = link_to "#" do
+            = icon('fas', 'cog')
   .groups
-    %a(href="/groups/23608/messages")
-      .group
-        %p.group__group-name 
-          %a(href="#") aaa
-        %p.group__latest-message 
-          %a(href="#") aaa
+    = link_to "#", class:"group" do
+      %p.group__group-name 
+        test
+      %p.group__latest-message 
+        まだメッセージはありません。

@@ -1,0 +1,11 @@
+.main-header, .main-header__left-box__member-list, .message__upper-info, .new_message, .input-box {
+  display: flex;
+}
+
+.message__upper-info, .message__text {
+  margin-bottom: 10px;
+}
+
+.submit-btn, .input-box__image {
+  cursor: pointer;
+}

@@ -1,0 +1,15 @@
+.chat-side, a {
+  color: #ffffff;
+}
+
+.group__latest-message, a {
+  text-decoration: none;
+}
+
+.side-header, .side-header__box, .side-header__box__menu {
+  display: flex;
+}
+
+.side-header__box, .side-header__box__user-name {
+  font-weight: bold;
+}
