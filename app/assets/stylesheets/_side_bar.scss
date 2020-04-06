@@ -1,5 +1,5 @@
 .chat-side {
-  background-color: #2f3e51;
+  background-color: $color_blackppoi;
   width: 300px;
   height: 100vh;
   float: left;
@@ -18,18 +18,18 @@
 
 .groups {
   height: calc(100vh - 100px);
-  background-color: #2f3e51;
+  background-color: $color_blackppoi;
   padding: 20px 20px 0px;
   overflow: scroll;
-}
-
-.group__group-name {
-  font-size: 15px;
-  padding: 0px 0px 5px;
-}
-
-.group__latest-message {
-  font-size: 11px;
+  .group {
+    &__group-name {
+      font-size: 15px;
+      padding: 0px 0px 5px;
+    }
+    &__latest-message {
+      font-size: 11px;
+    }
+  }
 }
 
 .side-header__box__menu__edit-user {
