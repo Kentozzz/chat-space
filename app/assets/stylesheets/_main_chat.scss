@@ -1,13 +1,10 @@
-.wrapper {
-  height: 0px;
-}
-
 .chat-main {
   width: calc(100vw - 300px);
   float: left;
 }
 
 .main-header {
+  display: flex;
   height: 100px;
   padding: 0 40px;
   justify-content: space-between;
@@ -30,7 +27,6 @@
     padding: 0 20px;
     margin-top: 28px;
     border: solid 1px $color_skyblue;
-    position: absolute;
     right: 40px;
   }
 }
@@ -39,10 +35,11 @@
   height: calc(100vh - 190px);
   padding: 46px 40px;
   background-color: #fafafa;
-  overflow: scroll;
   .message {
     padding-bottom: 40px;
     &__upper-info {
+      display: flex;
+      margin-bottom: 10px;
       &__talker {
         color: $color_glay;
         font-size: 16px;
@@ -60,8 +57,6 @@
     }
   }
 }
-
-
 
 .form {
   height: 90px;
@@ -88,10 +83,9 @@
     }
   }
     .submit-btn {
+      float: right;
       width: 100px;
       height: 50px;
-      padding: 0 30px;
-      margin-left: 19px;
       background-color: $color_skyblue;
       color: $color_white;
       border: none;
