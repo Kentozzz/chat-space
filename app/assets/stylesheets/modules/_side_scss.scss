@@ -10,6 +10,8 @@
   display: flex;
 }
 
-.side-header__box, .side-header__box__user-name {
+.side-header__box {
+  &__user-name {
   font-weight: bold;
+  }
 }
