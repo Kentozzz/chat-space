@@ -2,12 +2,13 @@
   .side-header
     .side-header__box
       %p.side-header__box__user-name
-        username
+      = current_user.name
       %ul.side-header__box__menu
         = link_to "#", class:"side-header__box__menu__new-group" do
           = icon('fas', 'edit')
-        = link_to "#", class:"side-header__box__menu__edit-user" do
-          = icon('fas', 'cog')
+        = link_to edit_user_path(current_user) do
+          = icon('fas', 'cog', class: 'icon')
+
   .groups
     = link_to "#", class:"group" do
       %p.group__group-name 
