@@ -1,23 +1,22 @@
 .chat-main
   .main-header
     .main-header__left-box
-      %h2.main-header__left-box__current-group data-group_id
+      %h2.main-header__left-box__current-group 
+        = @group.name
       %ul.main-header__left-box__member-list
         Member：
+        - @group.users.each do |users|
+          = users.name
         %li.main-header__left-box__member
-    = link_to "#" do
+    = link_to edit_group_path(@group) do
       .main-header__edit-btn Edit
   .messages
-    .message
-      .message__upper-info
-        %p.message__upper-info__talker test
-        %p.message__upper-info__date 0000/00/00(ooo) 00:00:00
-      %p.message__text text
+    =render @messages
   .form
-    .new_message
+    = form_for [@group, @message] do |f|
       .input-box
-        %input.input-box__text{placeholder: 'type a message' ,type: 'text' ,name: 'message[content]' ,id: 'message_content' }
-        %label{class: "input-box__image" ,type: "file" ,name: "message[image]" ,id: "message_image"}
-          = icon('fas', 'image')
-          %input{type: "file"}
-        %input.submit-btn{type:"submit" ,name:"commit" ,value:"Send" ,class:"form__submit"}
+        = f.text_field :content, class: 'input-box__text', placeholder: 'type a message'
+        = f.label :image, class: "input-box__image" do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+        =f.submit 'Send', class: 'submit-btn'
