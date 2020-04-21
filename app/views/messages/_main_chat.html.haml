@@ -12,7 +12,6 @@
       .main-header__edit-btn Edit
   .messages
     =render @messages
-
   .form
     = form_for [@group, @message] do |f|
       = f.text_field :content, class: 'form__text', placeholder: 'type a message'
