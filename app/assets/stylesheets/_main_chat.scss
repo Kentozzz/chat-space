@@ -42,8 +42,8 @@
       display: flex;
       margin-bottom: 10px;
       &__talker {
-        color: $color_glay;
-        font-size: 16px;
+        color: $black;
+        font-size: 14px;
         font-weight: bold;
       }
       &__date {
@@ -81,8 +81,6 @@
         position: absolute;
         right: 10px;
         top: 10px;
-        .icon {
-        }
         .hidden {
           display: none;
         }
