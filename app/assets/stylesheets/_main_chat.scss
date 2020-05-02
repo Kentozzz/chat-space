@@ -60,7 +60,7 @@
 }
 
 .form{
-  background-color: #D2D2D2;
+  background-color: #ddd;
   height: 90px;
   padding: 20px 40px;
   form{
@@ -68,6 +68,7 @@
     .form__text{
       width: 100%;
       padding: 10px;
+      border-style: none;
     }
     .input-box {
       position: relative;
@@ -87,8 +88,9 @@
       }
     }
     .form__submit-btn {
+      padding: 0 30px;
       height: 50px;
-      width: 130px;
+      width: 100px;
       background-color: $color_skyblue;
       margin-left: 15px;
       color: $color_white;
